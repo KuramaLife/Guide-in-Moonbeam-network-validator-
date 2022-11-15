@@ -115,6 +115,38 @@ systemctl status moonbeam.service
 ```bash
 journalctl -f -u moonbeam.service
 ```
+### Update the Client
+If you want to update your client, you can keep your existing chain data in tact, and only update the binary by following these steps:
+### 1. Stop the systemd service:
+```bash
+sudo systemctl stop moonbeam.service
+```
+### 2. Remove the old binary file:
+```bash
+rm  /var/lib/moonbeam-data/moonbeam
+```
+### 3. Get the latest version of Moonbeam from the  [Moonbeam GitHub Release page]([https://moonbeam.network/](https://github.com/PureStake/moonbeam/releases/)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
