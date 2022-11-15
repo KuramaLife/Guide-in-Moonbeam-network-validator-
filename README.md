@@ -21,9 +21,13 @@ b497f3e9f6f9c1e8591fbcbde5c18e24a5a5b4cdb98bc641ac7e643890a523fe
 ```
 
 
-### Update Packages and Depencies
+### Setup the Service
+
+### The following commands will set up everything regarding running the service.
+
+### 1. Create a service account to run the service:
 ```bash
-sudo apt update && sudo apt upgrade -y
+adduser moonbeam_service --system --no-create-home
 ```
 
 ### Install Depencies
