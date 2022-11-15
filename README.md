@@ -127,26 +127,36 @@ rm  /var/lib/moonbeam-data/moonbeam
 ```
 ### 3. Get the latest version of Moonbeam from the [Moonbeam GitHub Release page](https://github.com/PureStake/moonbeam/releases/)
 
+### 4. If you're using the release binary, update the version and run:
+```bash
+wget https://github.com/PureStake/moonbeam/releases/download/<NEW VERSION TAG HERE>/moonbeam
+```
+### 5. Move the binary to the data directory:
+```bash
+mv ./moonbeam /var/lib/moonbeam-data
+```
+### 6. Then go to the directory where the binary is located and grant permissions
+```bash
+cd /var/lib/moonbeam-data/moonbeam
+```
+```bash
+chmod +x moonbeam
+chown moonbeam_service moonbeam
+```
+###  7. Go back to original directory
+```bash
+cd 
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 8. Register and start the service by running:
+```bash
+systemctl enable moonbeam.service 
+systemctl start moonbeam.service 
+```
+### 9. You can also check the logs by executing:
+```bash
+journalctl -f -u moonbeam.service
+```
 
 
 
