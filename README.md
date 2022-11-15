@@ -52,7 +52,69 @@ The next step is to create the systemd configuration file. If you are setting up
 ```bash
 nano /etc/systemd/system/moonbeam.service
 ```
+### Insert the configuration below into the created file and make the necessary corrections
+```bash
+[Unit]
+Description="Moonbeam systemd service"
+After=network.target
+StartLimitIntervalSec=0
 
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+User=moonbeam_service
+SyslogIdentifier=moonbeam
+SyslogFacility=local7
+KillSignal=SIGHUP
+ExecStart=/var/lib/moonbeam-data/moonbeam \
+     --validator \
+     --port 30333 \
+     --rpc-port 9933 \
+     --ws-port 9944 \
+     --execution wasm \
+     --wasm-execution compiled \
+     --trie-cache-size 0 \
+     --db-cache <50% RAM in MB> \
+     --base-path /var/lib/moonbeam-data \
+     --chain moonbeam \
+     --name "YOUR-NODE-NAME" \
+     -- \
+     --port 30334 \
+     --rpc-port 9934 \
+     --ws-port 9945 \
+     --execution wasm \
+     --name="YOUR-NODE-NAME (Embedded Relay)"
+
+[Install]
+WantedBy=multi-user.target
+```
+### Then go to the directory where the binary is located and grant permissions
+```bash
+cd /var/lib/moonbeam-data/moonbeam
+```
+```bash
+chmod +x moonbeam
+chown moonbeam_service moonbeam
+```
+### Go back to original directory
+```bash
+cd 
+```
+### Run the Service
+Almost there! Register and start the service by running:
+```bash
+systemctl enable moonbeam.service
+systemctl start moonbeam.service
+```
+### And lastly, verify the service is running:
+```bash
+systemctl status moonbeam.service
+```
+### You can also check the logs by executing:
+```bash
+journalctl -f -u moonbeam.service
+```
 
 
 
