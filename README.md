@@ -5,11 +5,11 @@ In this guide you will find a detailed description of how to create a validator 
 
 # Explorer
 [Explorer](https://telemetry.polkadot.io/#list/0xfe58ea77779b7abda7da4ec526d14db9b1e9cd40a217c34892af80a9b332b76d)
-# Install Node Guide nibiru-testnet-1
+# Install Node Guide 
 ### Setting up variables
-Specify the name of your moniker (validator) which will be visible in the explorer
+First you need to download the binary file of the current version
 ```bash
-NODENAME=<YOUR_MONIKER_NAME>
+wget https://github.com/PureStake/moonbeam/releases/download/v0.27.1/moonbeam
 ```
 ### Save and import variables into system
 ```bash
