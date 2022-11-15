@@ -12,7 +12,7 @@ In this guide you will find a detailed description of how to create a validator 
 ### Setting up variables
 First you need to download the binary file of the current version
 ```bash
-wget https://github.com/PureStake/moonbeam/releases/download/v0.27.1/moonbeam
+wget https://github.com/PureStake/moonbeam/releases/download/v0.27.2/moonbeam
 ```
 ### To verify that you have downloaded the correct version, you can run  moonbeam in your terminal, you should receive the following output:
 ```bash
