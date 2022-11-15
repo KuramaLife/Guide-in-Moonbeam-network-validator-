@@ -125,7 +125,7 @@ sudo systemctl stop moonbeam.service
 ```bash
 rm  /var/lib/moonbeam-data/moonbeam
 ```
-### 3. Get the latest version of Moonbeam from the ([Moonbeam GitHub Release page](https://github.com/PureStake/moonbeam/releases/)
+### 3. Get the latest version of Moonbeam from the [Moonbeam GitHub Release page](https://github.com/PureStake/moonbeam/releases/)
 
 
 
