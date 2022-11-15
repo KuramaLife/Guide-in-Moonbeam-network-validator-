@@ -1,3 +1,6 @@
+![1_ZWNsHHSQNrU5jibNr-8Giw](https://user-images.githubusercontent.com/83699173/201930187-3691d813-58e0-41d9-9fb2-5f9af912ecf3.png)
+
+
 # Guide-in-Moonbeam-network-validator-
 In this guide you will find a detailed description of how to create a validator on the Moonbeam network 
 # Official Links
