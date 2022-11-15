@@ -11,17 +11,15 @@ First you need to download the binary file of the current version
 ```bash
 wget https://github.com/PureStake/moonbeam/releases/download/v0.27.1/moonbeam
 ```
-### Save and import variables into system
+### To verify that you have downloaded the correct version, you can run  moonbeam in your terminal, you should receive the following output:
 ```bash
-NIBIRU_PORT=39
-echo "export NODENAME=$NODENAME" >> $HOME/.bash_profile
-if [ ! $WALLET ]; then
-	echo "export WALLET=wallet" >> $HOME/.bash_profile
-fi
-echo "export NIBIRU_CHAIN_ID=nibiru-testnet-1" >> $HOME/.bash_profile
-echo "export NIBIRU_PORT=${NIBIRU_PORT}" >> $HOME/.bash_profile
-source $HOME/.bash_profile
+sha256sum
 ```
+### you should receive the following output:
+```bash
+b497f3e9f6f9c1e8591fbcbde5c18e24a5a5b4cdb98bc641ac7e643890a523fe
+```
+
 
 ### Update Packages and Depencies
 ```bash
