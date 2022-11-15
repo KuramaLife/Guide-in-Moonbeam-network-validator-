@@ -43,10 +43,10 @@ sudo chown -R moonbeam_service /var/lib/moonbeam-data
 ```
 ### Create the Configuration File
 The next step is to create the systemd configuration file. If you are setting up a collator node, make sure to follow the code snippets for Collator. Note that you have to:
-     # -  Replace YOUR-NODE-NAME in two different places
-     # -  Replace <50% RAM in MB> for 50% of the actual RAM your server has. For example, for 32 GB RAM, the value must be set to 16000. The minimum value is 2000, but          it is below the recommended specs
-     # -  Double-check that the binary is in the proper path as described below (ExecStart)
-     # -  Double-check the base path if you've used a different directory
+   ### -  Replace YOUR-NODE-NAME in two different places
+   ### -  Replace <50% RAM in MB> for 50% of the actual RAM your server has. For example, for 32 GB RAM, the value must be set to 16000. The minimum value is 2000, but          it is below the recommended specs
+   ### -  Double-check that the binary is in the proper path as described below (ExecStart)
+   ### -  Double-check the base path if you've used a different directory
  
 ### Create file 
 ```bash
